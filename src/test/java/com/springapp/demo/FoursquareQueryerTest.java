@@ -55,6 +55,9 @@ public class FoursquareQueryerTest {
         server = builder.enableWireLogging(LogLevel.ERROR).build();
         server.start(); // Start accepting connections
         port = server.getServerPort(); // store the port for safekeeping, so we can use our client against it
+
+        HttpClient<ByteBuf, ByteBuf> client = RxNetty.createHttpClient("localhost", port);
+        queryer =  new FoursquareQueryer(client);
     }
 
     @After
@@ -62,10 +65,55 @@ public class FoursquareQueryerTest {
         server.shutdown(); // Kill after each test
     }
 
+    /********************************************************************************************************************
+     *                                                                                                                  *
+     * Exercises                                                                                                        *
+     *                                                                                                                  *
+     *******************************************************************************************************************/
+
+    /**
+     * Exercise 1: modify the stream so that it only streams recommended places in Manhattan
+     */
+    @Test
+    public void filterStreamOnlyInNewYork() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    /**
+     * Exercise 2: count the number of recommended places that are in Brooklyn
+     */
+    @Test
+    public void countNumberEntriesInBrooklyn() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    /**
+     * Exercise 3: modify the stream so that it returns just the places to explore, none of the other information
+     * (i.e., strip out the Explore/Response/Group objects and just return the inner Items)
+     */
+    @Test
+    public void getJustTheItemsInExploreEntries() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    /**
+     * Exercise 4: each Explore object is streamed out with just one inner Item object.  Aggregate each Explore object into one,
+     * combining their inner Items.
+     */
+    @Test
+    public void aggregateStreamItems() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+
+    /********************************************************************************************************************
+     *                                                                                                                  *
+     * End Exercises                                                                                                    *
+     *                                                                                                                  *
+     *******************************************************************************************************************/
+
     @Test
     public void testGetStream() throws Exception {
-        HttpClient<ByteBuf, ByteBuf> client = RxNetty.createHttpClient("localhost", port);
-        queryer = new FoursquareQueryer(client);
         Observable<Explore> stream = queryer.getStream(FoursquarePathBuilder.fromExplorerEndpoint().setLatLon(1, 1));
 
         List<Explore> events = Lists.newArrayList(stream.toBlocking().toIterable());

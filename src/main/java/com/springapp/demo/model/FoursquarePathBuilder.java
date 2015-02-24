@@ -2,31 +2,19 @@ package com.springapp.demo.model;
 
 import org.apache.commons.lang3.Validate;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.charset.Charset;
+import java.util.TreeMap;
 
 /**
  * Created by tmeehan on 2/18/15.
  */
 public class FoursquarePathBuilder {
     private String baseUrl;
-    private String oauthToken;
-    private String ll;
-    private String near;
-    private String llAcc;
-    private String alt;
-    private String altAcc;
-    private String section;
-    private String query;
-    private String limit;
-    private String offset;
-    private String price;
 
-    private List<NameValuePair> urlParameters;
+    private TreeMap<String, NameValuePair> urlParameters;
 
     private final String v = "20150218";
 
@@ -34,7 +22,7 @@ public class FoursquarePathBuilder {
 
     private FoursquarePathBuilder(String baseUrl) {
         this.baseUrl = baseUrl;
-        urlParameters = new ArrayList<NameValuePair>(15);
+        urlParameters = new TreeMap<String, NameValuePair>();
     }
 
     public static FoursquarePathBuilder fromBaseUrl(String baseUrl) {
@@ -46,7 +34,7 @@ public class FoursquarePathBuilder {
     }
 
     public FoursquarePathBuilder setOathToken(String oauthToken) {
-        urlParameters.add(new BasicNameValuePair("oauth_token", oauthToken));
+        addParameter("oauth_token", oauthToken);
         return this;
     }
 
@@ -59,7 +47,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setLatLon(double latitude, double longitude) {
         String ll = String.format("%f2,%f2", latitude, longitude);
-        urlParameters.add(new BasicNameValuePair("ll", ll));
+        addParameter("ll", ll);
         return this;
     }
 
@@ -72,8 +60,7 @@ public class FoursquarePathBuilder {
      * @return
      */
     public FoursquarePathBuilder setNear(String location) {
-        String near = String.format("near=%s", location);
-        urlParameters.add(new BasicNameValuePair("near", near));
+        addParameter("near", location);
         return this;
     }
 
@@ -85,7 +72,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setLlAcc(double llAcc) {
         String llAccs = String.format("%f1", llAcc);
-        urlParameters.add(new BasicNameValuePair("llAcc", llAccs));
+        addParameter("llAcc", llAccs);
         return this;
     }
 
@@ -97,7 +84,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setAlt(double alt) {
         String alts = String.format("%f1", alt);
-        urlParameters.add(new BasicNameValuePair("alt", alts));
+        addParameter("alt", alts);
         return this;
     }
 
@@ -109,7 +96,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setAltAcc(double altAcc) {
         String altAccs = String.format("%f2", altAcc);
-        urlParameters.add(new BasicNameValuePair("altAcc", altAccs));
+        addParameter("altAcc", altAccs);
         return this;
     }
 
@@ -123,7 +110,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setSection(Section section) {
         String sections = section.getQueryName();
-        urlParameters.add(new BasicNameValuePair("section", sections));
+        addParameter("section", sections);
         return this;
     }
 
@@ -136,7 +123,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setQuery(String query) {
         String querys = query;
-        urlParameters.add(new BasicNameValuePair("query", querys));
+        addParameter("query", querys);
         return this;
     }
 
@@ -148,7 +135,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setLimit(Integer limit) {
         String limits = limit.toString();
-        urlParameters.add(new BasicNameValuePair("limit", limits));
+        addParameter("limit", limits);
         return this;
     }
 
@@ -160,7 +147,7 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setOffset(Integer offset) {
         String offsets = offset.toString();
-        urlParameters.add(new BasicNameValuePair("offset", offsets));
+        addParameter("offset", offsets);
         return this;
     }
 
@@ -174,71 +161,48 @@ public class FoursquarePathBuilder {
      */
     public FoursquarePathBuilder setPrice(Price price) {
         String prices = price.getQueryString();
-        urlParameters.add(new BasicNameValuePair("price", prices));
+        addParameter("price", prices);
         return this;
+    }
+
+    /**
+     * Adds a parameter to the generated query string
+     * @param key
+     * @param value
+     */
+    private void addParameter(String key, String value) {
+        urlParameters.put(key, new BasicNameValuePair(key, value));
     }
 
     public String build() {
         StringBuilder builder = new StringBuilder(baseUrl);
         Validate.isTrue(
-                (near == null && ll != null) || (near != null && ll == null),
+                (!urlParameters.containsKey("near") && urlParameters.containsKey("ll"))
+                        || (urlParameters.containsKey("near") && !urlParameters.containsKey("ll")),
                 "Only one of latitude/longitude or near can be set"
         );
 
         builder.append("?");
-        if (near != null) {
-            builder.append(String.format("&near=%s", near));
-        }
-        else {
-            builder.append(String.format("&ll=%s", ll));
+
+        addParameter("v", v);
+
+        if (urlParameters.containsKey("llAcc")) {
+            Validate.isTrue(urlParameters.containsKey("ll"), "Latitude/longitude must be set");
         }
 
-        if (oauthToken != null) {
-            builder.append(String.format("&oauth_token=%s", oauthToken));
+        if (urlParameters.containsKey("altAcc")) {
+            Validate.isTrue(urlParameters.containsKey("alt"), "Latitude/longitude must be set");
         }
 
-        if (llAcc != null) {
-            Validate.notNull(ll, "Latitude/longitude must be set");
-            builder.append(String.format("&llAcc=%s", llAcc));
+        if (urlParameters.containsKey("query")) {
+            Validate.isTrue(!urlParameters.containsKey("section"), "Do not provide when already providing a section");
         }
 
-        if (query != null) {
-            Validate.isTrue(section == null, "Do not provide when already providing a section");
-            builder.append(String.format("&section=%s", section));
+        if (urlParameters.containsKey("section")) {
+            Validate.isTrue(!urlParameters.containsKey("query"), "Do not provide when already providing a query");
         }
+        builder.append(URLEncodedUtils.format(urlParameters.values(), Charset.forName("UTF-8")));
 
-        if (section != null) {
-            Validate.isTrue(query == null, "Do not provide when already providing a query");
-            builder.append(String.format("&query=%s", query));
-        }
-
-        if (alt != null) {
-            builder.append(String.format("&alt=%s", alt));
-        }
-
-        if (altAcc != null) {
-            Validate.notNull(alt, "alt must be provided when setting altAcc");
-            builder.append(String.format("&altAcc=%s", altAcc));
-        }
-
-        if (limit != null) {
-            builder.append(String.format("&limit=%s", limit));
-        }
-
-        if (offset != null) {
-            builder.append(String.format("&offset=%s", offset));
-        }
-
-        if (price != null) {
-            builder.append(String.format("&price=%s", price));
-        }
-
-        builder.append(String.format("&v=%s", v));
-
-        try {
-            return URLEncoder.encode(builder.toString(), "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        }
+        return builder.toString();
     }
 }

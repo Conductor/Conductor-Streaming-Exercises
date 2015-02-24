@@ -5,7 +5,6 @@ import com.springapp.demo.model.Price;
 import com.springapp.demo.model.Section;
 import com.springapp.demo.model.generated.Explore;
 import rx.functions.Action1;
-import rx.functions.Func1;
 
 public class MainController {
 
@@ -15,26 +14,25 @@ public class MainController {
         this.foursquareQueryer = foursquareQueryer;
     }
 
+    /**
+     * Exercise 5: Below you'll find a simple query to the Foursquare API for cheap eats near Brooklyn.
+     * Modify this so that we query Foursquare for both Los Angeles and New York for only the highest price dining
+     * options.  This should be as real time as possible--don't buffer anything in memory, just print it out as soon
+     * Foursquare sends us more information.  You may want to use a combination operator to achieve this.
+     */
     void home() {
         foursquareQueryer.getStream(
                 FoursquarePathBuilder
                         .fromExplorerEndpoint()
                         .setLatLon(40.7, -74)
                         .setSection(Section.FOOD)
-                        .setPrice(Price.$$$)
+                        .setPrice(Price.$)
                         .setOathToken("NRS3KFBCQ1TDUPU3XOSBZN0SSGDSUGYFVJI2J0EJSNMTVEE5")
         )
-        .filter(new Func1<Explore, Boolean>() {
-            @Override
-            public Boolean call(Explore explore) {
-                return "Hoboken".equals(explore.getResponse().getGroups().get(0).getItems().get(0).getVenue().getLocation().getCity());
-            }
-        })
-        .toBlocking()
-        .forEach(new Action1<Explore>() {
+        .subscribe(new Action1<Explore>() {
             @Override
             public void call(Explore explore) {
-                System.out.println(explore);
+                System.out.println("Received: " + explore.toString());
             }
         });
     }

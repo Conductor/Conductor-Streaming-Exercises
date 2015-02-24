@@ -18,6 +18,9 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 /**
+ * Utility class to query Foursquare endpoints, specifically the explore endpoint.
+ * See: https://developer.foursquare.com/docs/venues/explore
+ *
  * Created by tmeehan on 2/19/15.
  */
 public class FoursquareQueryer {
@@ -27,6 +30,10 @@ public class FoursquareQueryer {
     private final ObjectMapper mapper;
     private final HttpClient<ByteBuf, ByteBuf> rxClient;
 
+    /**
+     * Constructs a FoursquareQueryer with a default http client, which should fulfil non-testing
+     * use cases
+     */
     public FoursquareQueryer() {
         this(RxNetty.<ByteBuf, ByteBuf>newHttpClientBuilder(FOURSQUARE_HOST, FOURSQUARE_PORT)
                 .withSslEngineFactory(DefaultFactories.trustAll())
@@ -34,11 +41,21 @@ public class FoursquareQueryer {
                 .build());
     }
 
+    /**
+     * Constructs a FoursquareQueryer with an injected rxClient, useful for unit testing
+     * @param rxClient
+     */
     protected FoursquareQueryer(HttpClient<ByteBuf, ByteBuf> rxClient) {
         this.rxClient = rxClient;
         mapper = new ObjectMapper();
     }
 
+    /**
+     * Returns an observable stream of Explore objects from the Foursquare endpoint.
+     *
+     * @param builder the query to construct
+     * @return an observable sequence of Explore objects
+     */
     public Observable<Explore> getStream(final FoursquarePathBuilder builder) {
         return Observable.create(new Observable.OnSubscribe<Explore>() {
             @Override
@@ -57,6 +74,14 @@ public class FoursquareQueryer {
         });
     }
 
+    /**
+     * The Foursquare explore endpoint provides a method to paginate results from the endpoint.  This method returns
+     * one "page" from the endpoint, at index i.
+     *
+     * @param builder the query to construct
+     * @param i the index to fetch
+     * @return the Explore object representing the ith page
+     */
     protected Explore getPaginatedExploreObject(final FoursquarePathBuilder builder, final int i) {
         return rxClient.submit(HttpClientRequest.createGet(builder.setOffset(i).setLimit(1).build()))
                 .flatMap(new Func1<HttpClientResponse<ByteBuf>, Observable<ByteBuf>>() {
