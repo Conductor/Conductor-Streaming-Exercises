@@ -1,0 +1,186 @@
+{
+    "meta":{
+        "code":200
+    },
+    "notifications":[
+        {
+            "type":"notificationTray",
+            "item":{
+                "unreadCount":1
+            }
+        }
+    ],
+    "response":{
+        "suggestedFilters":{
+            "header":"Tap to show:",
+            "filters":[
+                {
+                    "name":"Places friends go",
+                    "key":"friendVisits"
+                },
+                {
+                    "name":"$-$$$$",
+                    "key":"price"
+                }
+            ]
+        },
+        "warning":{
+            "text":"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+        },
+        "suggestedRadius":922,
+        "headerLocation":"New York",
+        "headerFullLocation":"New York",
+        "headerLocationGranularity":"city",
+        "totalResults":248,
+        "suggestedBounds":{
+            "ne":{
+                "lat":40.7012826922921,
+                "lng":-73.99506085088998
+            },
+            "sw":{
+                "lat":40.69858303250665,
+                "lng":-73.99233421933383
+            }
+        },
+        "groups":[
+            {
+                "type":"Recommended Places",
+                "name":"recommended",
+                "items":[
+                    {
+                        "reasons":{
+                            "count":0,
+                            "items":[
+                                {
+                                    "summary":"This spot is popular",
+                                    "type":"general",
+                                    "reasonName":"globalInteractionReason"
+                                }
+                            ]
+                        },
+                        "venue":{
+                            "id":"4471bf9af964a5209c331fe3",
+                            "name":"Jack the Horse Tavern",
+                            "contact":{
+                                "phone":"7188525084",
+                                "formattedPhone":"(718) 852-5084",
+                                "twitter":"jthtavern"
+                            },
+                            "location":{
+                                "address":"66 Hicks St",
+                                "crossStreet":"at Cranberry",
+                                "lat":40.69993286239937,
+                                "lng":-73.9936975351119,
+                                "distance":531,
+                                "postalCode":"11201",
+                                "cc":"US",
+                                "city":"Brooklyn",
+                                "state":"NY",
+                                "country":"United States",
+                                "formattedAddress":[
+                                    "66 Hicks St (at Cranberry)",
+                                    "Brooklyn, NY 11201"
+                                ]
+                            },
+                            "categories":[
+                                {
+                                    "id":"4bf58dd8d48988d14e941735",
+                                    "name":"American Restaurant",
+                                    "pluralName":"American Restaurants",
+                                    "shortName":"American",
+                                    "icon":{
+                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                                        "suffix":".png"
+                                    },
+                                    "primary":true
+                                }
+                            ],
+                            "verified":true,
+                            "stats":{
+                                "checkinsCount":4174,
+                                "usersCount":2138,
+                                "tipCount":74
+                            },
+                            "url":"http:\/\/www.jackthehorse.com",
+                            "price":{
+                                "tier":3,
+                                "message":"Expensive",
+                                "currency":"$"
+                            },
+                            "hasMenu":true,
+                            "like":false,
+                            "rating":9.0,
+                            "ratingColor":"00B551",
+                            "ratingSignals":147,
+                            "menu":{
+                                "type":"Menu",
+                                "label":"Menu",
+                                "anchor":"View Menu",
+                                "url":"https:\/\/foursquare.com\/v\/jack-the-horse-tavern\/4471bf9af964a5209c331fe3\/menu",
+                                "mobileUrl":"https:\/\/foursquare.com\/v\/4471bf9af964a5209c331fe3\/device_menu"
+                            },
+                            "hours":{
+                                "status":"Open until 10:30 PM",
+                                "isOpen":true
+                            },
+                            "specials":{
+                                "count":0,
+                                "items":[
+
+                                ]
+                            },
+                            "photos":{
+                                "count":98,
+                                "groups":[
+
+                                ]
+                            },
+                            "hereNow":{
+                                "count":0,
+                                "summary":"Nobody here",
+                                "groups":[
+
+                                ]
+                            },
+                            "venuePage":{
+                                "id":"94497137"
+                            }
+                        },
+                        "tips":[
+                            {
+                                "id":"4d751af4c54e8eec17115735",
+                                "createdAt":1299520244,
+                                "text":"PHOTO: Did you know the house from \"Moonstruck\" is right down the block at 19 Cranberry?  Here's Cher and Nicholas Cage on the set in 1987, at the link!",
+                                "type":"user",
+                                "url":"http:\/\/nydn.us\/ePXFGq",
+                                "canonicalUrl":"https:\/\/foursquare.com\/item\/4d751af4c54e8eec17115735",
+                                "likes":{
+                                    "count":25,
+                                    "groups":[
+
+                                    ],
+                                    "summary":"25 likes"
+                                },
+                                "logView":true,
+                                "todo":{
+                                    "count":3
+                                },
+                                "user":{
+                                    "id":"1241858",
+                                    "firstName":"The New York Daily News",
+                                    "gender":"none",
+                                    "photo":{
+                                        "prefix":"https:\/\/irs0.4sqi.net\/img\/user\/",
+                                        "suffix":"\/3EV01452MGIUWBAQ.jpg"
+                                    },
+                                    "type":"page"
+                                }
+                            }
+                        ],
+                        "referralId":"e-0-4471bf9af964a5209c331fe3-4"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,170 @@
+{"meta": {
+    "code": 200
+}, "notifications": [
+    {
+        "type": "notificationTray",
+        "item": {
+            "unreadCount": 1
+        }
+    }
+], "response": {
+    "suggestedFilters": {
+        "header": "Tap to show:",
+        "filters": [
+            {
+                "name": "$-$$$$",
+                "key": "price"
+            },
+            {
+                "name": "I haven't been",
+                "key": "novelty"
+            }
+        ]
+    },
+    "warning": {
+        "text": "There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+    },
+    "suggestedRadius": 922,
+    "headerLocation": "New York",
+    "headerFullLocation": "New York",
+    "headerLocationGranularity": "city",
+    "totalResults": 10,
+    "suggestedBounds": {
+        "ne": {
+            "lat": 40.69969981307108,
+            "lng": -73.99425772112157
+        },
+        "sw": {
+            "lat": 40.69700015328563,
+            "lng": -73.99153047440548
+        }
+    },
+    "groups": [
+        {
+            "type": "Recommended Places",
+            "name": "recommended",
+            "items": [
+                {
+                    "reasons": {
+                        "count": 0,
+                        "items": [
+                            {
+                                "summary": "This spot is popular",
+                                "type": "general",
+                                "reasonName": "globalInteractionReason"
+                            }
+                        ]
+                    },
+                    "venue": {
+                        "id": "4de26e06814df7ebdc14af8b",
+                        "name": "Vineapple Cafe",
+                        "contact": {
+                            "phone": "3477991701",
+                            "formattedPhone": "(347) 799-1701",
+                            "twitter": "vineapplecafe"
+                        },
+                        "location": {
+                            "address": "71 Pineapple St",
+                            "crossStreet": "btwn Henry & Hicks",
+                            "lat": 40.69834998317835,
+                            "lng": -73.99289409776352,
+                            "distance": 627,
+                            "postalCode": "11201",
+                            "cc": "US",
+                            "city": "Brooklyn",
+                            "state": "NY",
+                            "country": "United States",
+                            "formattedAddress": ["71 Pineapple St (btwn Henry & Hicks)", "Brooklyn, NY 11201"]
+                        },
+                        "categories": [
+                            {
+                                "id": "4bf58dd8d48988d16d941735",
+                                "name": "Café",
+                                "pluralName": "Cafés",
+                                "shortName": "Café",
+                                "icon": {
+                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                                    "suffix": ".png"
+                                },
+                                "primary": true
+                            }
+                        ],
+                        "verified": true,
+                        "stats": {
+                            "checkinsCount": 5160,
+                            "usersCount": 1706,
+                            "tipCount": 91
+                        },
+                        "url": "http:\/\/vineapple.com",
+                        "price": {
+                            "tier": 2,
+                            "message": "Moderate",
+                            "currency": "$"
+                        },
+                        "hasMenu": true,
+                        "like": false,
+                        "rating": 9.1,
+                        "ratingColor": "00B551",
+                        "ratingSignals": 267,
+                        "menu": {
+                            "type": "Menu",
+                            "label": "Menu",
+                            "anchor": "View Menu",
+                            "url": "https:\/\/foursquare.com\/v\/vineapple-cafe\/4de26e06814df7ebdc14af8b\/menu",
+                            "mobileUrl": "https:\/\/foursquare.com\/v\/4de26e06814df7ebdc14af8b\/device_menu"
+                        },
+                        "hours": {
+                            "status": "Open until 8:00 PM",
+                            "isOpen": true
+                        },
+                        "specials": {
+                            "count": 0,
+                            "items": []
+                        },
+                        "photos": {
+                            "count": 154,
+                            "groups": []
+                        },
+                        "hereNow": {
+                            "count": 0,
+                            "summary": "Nobody here",
+                            "groups": []
+                        },
+                        "venuePage": {
+                            "id": "94802691"
+                        }
+                    },
+                    "tips": [
+                        {
+                            "id": "5022a28ae4b007e779b1ba24",
+                            "createdAt": 1344447114,
+                            "text": "Favorite freelancer spot. Great coffee, good tunes, strong wifi, lovely staff. Stay all day! They serve beer & wine, too.",
+                            "type": "user",
+                            "canonicalUrl": "https:\/\/foursquare.com\/item\/5022a28ae4b007e779b1ba24",
+                            "likes": {
+                                "count": 12,
+                                "groups": [],
+                                "summary": "12 likes"
+                            },
+                            "logView": true,
+                            "todo": {
+                                "count": 0
+                            },
+                            "user": {
+                                "id": "1991265",
+                                "firstName": "Lauren",
+                                "lastName": "Farmer",
+                                "gender": "female",
+                                "photo": {
+                                    "prefix": "https:\/\/irs0.4sqi.net\/img\/user\/",
+                                    "suffix": "\/T5BLBJDTXAFWLAZI.jpg"
+                                }
+                            }
+                        }
+                    ],
+                    "referralId": "e-0-4de26e06814df7ebdc14af8b-7"
+                }
+            ]
+        }
+    ]
+}}

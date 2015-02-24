@@ -1,0 +1,174 @@
+{"meta": {
+    "code": 200
+}, "notifications": [
+    {
+        "type": "notificationTray",
+        "item": {
+            "unreadCount": 1
+        }
+    }
+], "response": {
+    "suggestedFilters": {
+        "header": "Tap to show:",
+        "filters": [
+            {
+                "name": "$-$$$$",
+                "key": "price"
+            },
+            {
+                "name": "With specials",
+                "key": "specials"
+            }
+        ]
+    },
+    "warning": {
+        "text": "There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+    },
+    "suggestedRadius": 922,
+    "headerLocation": "New York",
+    "headerFullLocation": "New York",
+    "headerLocationGranularity": "city",
+    "totalResults": 10,
+    "suggestedBounds": {
+        "ne": {
+            "lat": 40.70508676952132,
+            "lng": -73.9961386016178
+        },
+        "sw": {
+            "lat": 40.702387109735874,
+            "lng": -73.99341341940881
+        }
+    },
+    "groups": [
+        {
+            "type": "Recommended Places",
+            "name": "recommended",
+            "items": [
+                {
+                    "reasons": {
+                        "count": 0,
+                        "items": [
+                            {
+                                "summary": "This spot is popular",
+                                "type": "general",
+                                "reasonName": "globalInteractionReason"
+                            }
+                        ]
+                    },
+                    "venue": {
+                        "id": "3fd66200f964a520efe81ee3",
+                        "name": "The River Café",
+                        "contact": {
+                            "phone": "7185225200",
+                            "formattedPhone": "(718) 522-5200",
+                            "twitter": "therivercafe"
+                        },
+                        "location": {
+                            "address": "1 Water St",
+                            "crossStreet": "at Brooklyn Bridge",
+                            "lat": 40.7037369396286,
+                            "lng": -73.9947760105133,
+                            "distance": 606,
+                            "postalCode": "11201",
+                            "cc": "US",
+                            "city": "Brooklyn",
+                            "state": "NY",
+                            "country": "United States",
+                            "formattedAddress": ["1 Water St (at Brooklyn Bridge)", "Brooklyn, NY 11201"]
+                        },
+                        "categories": [
+                            {
+                                "id": "4bf58dd8d48988d14e941735",
+                                "name": "American Restaurant",
+                                "pluralName": "American Restaurants",
+                                "shortName": "American",
+                                "icon": {
+                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                                    "suffix": ".png"
+                                },
+                                "primary": true
+                            }
+                        ],
+                        "verified": true,
+                        "stats": {
+                            "checkinsCount": 3752,
+                            "usersCount": 3203,
+                            "tipCount": 87
+                        },
+                        "url": "http:\/\/www.rivercafe.com",
+                        "price": {
+                            "tier": 4,
+                            "message": "Very Expensive",
+                            "currency": "$"
+                        },
+                        "hasMenu": true,
+                        "like": false,
+                        "rating": 9.0,
+                        "ratingColor": "00B551",
+                        "ratingSignals": 176,
+                        "reservations": {
+                            "url": "http:\/\/www.opentable.com\/single.aspx?rid=820&ref=9601"
+                        },
+                        "menu": {
+                            "type": "Menu",
+                            "label": "Menu",
+                            "anchor": "View Menu",
+                            "url": "https:\/\/foursquare.com\/v\/the-river-caf%C3%A9\/3fd66200f964a520efe81ee3\/menu",
+                            "mobileUrl": "https:\/\/foursquare.com\/v\/3fd66200f964a520efe81ee3\/device_menu"
+                        },
+                        "hours": {
+                            "status": "Open until 11:00 PM",
+                            "isOpen": true
+                        },
+                        "specials": {
+                            "count": 0,
+                            "items": []
+                        },
+                        "photos": {
+                            "count": 430,
+                            "groups": []
+                        },
+                        "hereNow": {
+                            "count": 0,
+                            "summary": "Nobody here",
+                            "groups": []
+                        },
+                        "venuePage": {
+                            "id": "35406086"
+                        },
+                        "storeId": ""
+                    },
+                    "tips": [
+                        {
+                            "id": "4c77dd6aa3a29c74ddba5ecd",
+                            "createdAt": 1282923882,
+                            "text": "One of the city\u2019s best views, and excellent food still, after all these years. A sunset reservation\u2019s best, with rabbit and dumplings.",
+                            "type": "user",
+                            "canonicalUrl": "https:\/\/foursquare.com\/item\/4c77dd6aa3a29c74ddba5ecd",
+                            "likes": {
+                                "count": 138,
+                                "groups": [],
+                                "summary": "138 likes"
+                            },
+                            "logView": true,
+                            "todo": {
+                                "count": 107
+                            },
+                            "user": {
+                                "id": "360215",
+                                "firstName": "The New York Times",
+                                "gender": "none",
+                                "photo": {
+                                    "prefix": "https:\/\/irs1.4sqi.net\/img\/user\/",
+                                    "suffix": "\/PYLLJKRD2U343VPG.png"
+                                },
+                                "type": "page"
+                            }
+                        }
+                    ],
+                    "referralId": "e-0-3fd66200f964a520efe81ee3-8"
+                }
+            ]
+        }
+    ]
+}}

@@ -1,0 +1,180 @@
+{
+    "meta":{
+        "code":200
+    },
+    "notifications":[
+        {
+            "type":"notificationTray",
+            "item":{
+                "unreadCount":1
+            }
+        }
+    ],
+    "response":{
+        "suggestedFilters":{
+            "header":"Tap to show:",
+            "filters":[
+                {
+                    "name":"Open now",
+                    "key":"openNow"
+                },
+                {
+                    "name":"Places friends go",
+                    "key":"friendVisits"
+                }
+            ]
+        },
+        "warning":{
+            "text":"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+        },
+        "suggestedRadius":922,
+        "headerLocation":"New York",
+        "headerFullLocation":"New York",
+        "headerLocationGranularity":"city",
+        "totalResults":10,
+        "suggestedBounds":{
+            "ne":{
+                "lat":40.70285113114201,
+                "lng":-73.99764126117948
+            },
+            "sw":{
+                "lat":40.69807424601781,
+                "lng":-73.99491483394381
+            }
+        },
+        "groups":[
+            {
+                "type":"Recommended Places",
+                "name":"recommended",
+                "items":[
+                    {
+                        "reasons":{
+                            "count":0,
+                            "items":[
+                                {
+                                    "summary":"This spot is popular",
+                                    "type":"general",
+                                    "reasonName":"globalInteractionReason"
+                                }
+                            ]
+                        },
+                        "venue":{
+                            "id":"4b81ea40f964a520e0c330e3",
+                            "name":"Brooklyn Bridge Park - Pier 1",
+                            "contact":{
+                                "twitter":"bklynbrdgpark"
+                            },
+                            "location":{
+                                "address":"334 Furman St",
+                                "crossStreet":"Cranberry",
+                                "lat":40.702634,
+                                "lng":-73.996119,
+                                "distance":439,
+                                "postalCode":"11201",
+                                "cc":"US",
+                                "city":"Brooklyn",
+                                "state":"NY",
+                                "country":"United States",
+                                "formattedAddress":[
+                                    "334 Furman St (Cranberry)",
+                                    "Brooklyn, NY 11201"
+                                ]
+                            },
+                            "categories":[
+                                {
+                                    "id":"4bf58dd8d48988d163941735",
+                                    "name":"Park",
+                                    "pluralName":"Parks",
+                                    "shortName":"Park",
+                                    "icon":{
+                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/park_",
+                                        "suffix":".png"
+                                    },
+                                    "primary":true
+                                }
+                            ],
+                            "verified":true,
+                            "stats":{
+                                "checkinsCount":14752,
+                                "usersCount":9615,
+                                "tipCount":62
+                            },
+                            "url":"http:\/\/www.brooklynbridgepark.org",
+                            "like":false,
+                            "rating":9.5,
+                            "ratingColor":"00B551",
+                            "ratingSignals":169,
+                            "hours":{
+                                "status":"Likely open",
+                                "isOpen":true
+                            },
+                            "specials":{
+                                "count":0,
+                                "items":[
+
+                                ]
+                            },
+                            "photos":{
+                                "count":1401,
+                                "groups":[
+
+                                ]
+                            },
+                            "hereNow":{
+                                "count":0,
+                                "summary":"Nobody here",
+                                "groups":[
+
+                                ]
+                            }
+                        },
+                        "tips":[
+                            {
+                                "id":"5162c51ee4b0946e1c63f2b5",
+                                "createdAt":1365427486,
+                                "text":"Many types of birds and crustaceans have made themselves at home in the salt marsh at Pier 1.  We can't blame them- the view is spectacular!",
+                                "type":"user",
+                                "canonicalUrl":"https:\/\/foursquare.com\/item\/5162c51ee4b0946e1c63f2b5",
+                                "photo":{
+                                    "id":"5162c51f7ab49c026b2b15bc",
+                                    "createdAt":1365427487,
+                                    "source":{
+                                        "name":"Foursquare Web",
+                                        "url":"https:\/\/foursquare.com"
+                                    },
+                                    "prefix":"https:\/\/irs0.4sqi.net\/img\/general\/",
+                                    "suffix":"\/13764780__bnl3AdEOgNoLoIM5xGj95juKyPkO4huoIkI9IuzqqU.jpg",
+                                    "width":800,
+                                    "height":521
+                                },
+                                "photourl":"https:\/\/irs0.4sqi.net\/img\/general\/original\/13764780__bnl3AdEOgNoLoIM5xGj95juKyPkO4huoIkI9IuzqqU.jpg",
+                                "likes":{
+                                    "count":117,
+                                    "groups":[
+
+                                    ],
+                                    "summary":"117 likes"
+                                },
+                                "logView":true,
+                                "todo":{
+                                    "count":17
+                                },
+                                "user":{
+                                    "id":"13764780",
+                                    "firstName":"City of New York",
+                                    "gender":"none",
+                                    "photo":{
+                                        "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                                        "suffix":"\/2X1FKJPUY3DGRRK3.png"
+                                    },
+                                    "type":"page"
+                                }
+                            }
+                        ],
+                        "referralId":"e-0-4b81ea40f964a520e0c330e3-2"
+                    }
+                ]
+            }
+        ]
+    }
+}

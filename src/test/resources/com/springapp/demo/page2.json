@@ -1,0 +1,186 @@
+{
+    "meta":{
+        "code":200
+    },
+    "notifications":[
+        {
+            "type":"notificationTray",
+            "item":{
+                "unreadCount":1
+            }
+        }
+    ],
+    "response":{
+        "suggestedFilters":{
+            "header":"Tap to show:",
+            "filters":[
+                {
+                    "name":"Open now",
+                    "key":"openNow"
+                },
+                {
+                    "name":"Places friends go",
+                    "key":"friendVisits"
+                }
+            ]
+        },
+        "warning":{
+            "text":"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+        },
+        "suggestedRadius":922,
+        "headerLocation":"New York",
+        "headerFullLocation":"New York",
+        "headerLocationGranularity":"city",
+        "totalResults":10,
+        "suggestedBounds":{
+            "ne":{
+                "lat":40.70285113114201,
+                "lng":-73.99764126117948
+            },
+            "sw":{
+                "lat":40.69807424601781,
+                "lng":-73.99491483394381
+            }
+        },
+        "groups":[
+            {
+                "type":"Recommended Places",
+                "name":"recommended",
+                "items":[
+                    {
+                        "reasons":{
+                            "count":0,
+                            "items":[
+                                {
+                                    "summary":"This spot is popular",
+                                    "type":"general",
+                                    "reasonName":"globalInteractionReason"
+                                }
+                            ]
+                        },
+                        "venue":{
+                            "id":"430d0a00f964a5203e271fe3",
+                            "name":"Brooklyn Bridge Park",
+                            "contact":{
+                                "phone":"2128033822",
+                                "formattedPhone":"(212) 803-3822",
+                                "twitter":"nycparks",
+                                "facebook":"104475634308",
+                                "facebookUsername":"BartowPell",
+                                "facebookName":"Bartow-Pell Mansion Museum"
+                            },
+                            "location":{
+                                "address":"Main St.",
+                                "crossStreet":"Plymouth St.",
+                                "lat":40.701593743002,
+                                "lng":-73.99592399597168,
+                                "distance":387,
+                                "postalCode":"11201",
+                                "cc":"US",
+                                "city":"Brooklyn",
+                                "state":"NY",
+                                "country":"United States",
+                                "formattedAddress":[
+                                    "Main St. (Plymouth St.)",
+                                    "Brooklyn, NY 11201"
+                                ]
+                            },
+                            "categories":[
+                                {
+                                    "id":"4bf58dd8d48988d163941735",
+                                    "name":"Park",
+                                    "pluralName":"Parks",
+                                    "shortName":"Park",
+                                    "icon":{
+                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/park_",
+                                        "suffix":".png"
+                                    },
+                                    "primary":true
+                                }
+                            ],
+                            "verified":true,
+                            "stats":{
+                                "checkinsCount":28106,
+                                "usersCount":17544,
+                                "tipCount":170
+                            },
+                            "url":"http:\/\/nyc.gov\/parks",
+                            "like":false,
+                            "rating":9.7,
+                            "ratingColor":"00B551",
+                            "ratingSignals":517,
+                            "hours":{
+                                "status":"Likely open",
+                                "isOpen":true
+                            },
+                            "specials":{
+                                "count":0,
+                                "items":[
+
+                                ]
+                            },
+                            "photos":{
+                                "count":3832,
+                                "groups":[
+
+                                ]
+                            },
+                            "hereNow":{
+                                "count":0,
+                                "summary":"Nobody here",
+                                "groups":[
+
+                                ]
+                            }
+                        },
+                        "tips":[
+                            {
+                                "id":"4eaf024f9a521bacdb216401",
+                                "createdAt":1320092239,
+                                "text":"The best waterfront in NYC offers a unique view of the lower Manhattan skyline, aquatic features, such as a salt marsh filled with native cordgrass, and Jane\u2019s Carousel, a restored ride from 1922.",
+                                "type":"user",
+                                "url":"http:\/\/newyork.timeout.com\/things-to-do\/2157709\/the-best-of-nyc?page=0,4?cmpid=4sq",
+                                "canonicalUrl":"https:\/\/foursquare.com\/item\/4eaf024f9a521bacdb216401",
+                                "photo":{
+                                    "id":"4eb07b21754a93b634da178b",
+                                    "createdAt":1320188705,
+                                    "source":{
+                                        "name":"Foursquare Web",
+                                        "url":"https:\/\/foursquare.com"
+                                    },
+                                    "prefix":"https:\/\/irs2.4sqi.net\/img\/general\/",
+                                    "suffix":"\/FVQLIPZXSEVCSCT3YU0SNMGDCADXBHRZYFSJUAGP5SXPCXPF.jpg",
+                                    "width":492,
+                                    "height":330
+                                },
+                                "photourl":"https:\/\/irs2.4sqi.net\/img\/general\/original\/FVQLIPZXSEVCSCT3YU0SNMGDCADXBHRZYFSJUAGP5SXPCXPF.jpg",
+                                "likes":{
+                                    "count":613,
+                                    "groups":[
+
+                                    ],
+                                    "summary":"613 likes"
+                                },
+                                "logView":true,
+                                "todo":{
+                                    "count":122
+                                },
+                                "user":{
+                                    "id":"742542",
+                                    "firstName":"Time Out New York",
+                                    "gender":"none",
+                                    "photo":{
+                                        "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                                        "suffix":"\/XXHKCBSQHBORZNSR.jpg"
+                                    },
+                                    "type":"page"
+                                }
+                            }
+                        ],
+                        "referralId":"e-0-430d0a00f964a5203e271fe3-1"
+                    }
+                ]
+            }
+        ]
+    }
+}

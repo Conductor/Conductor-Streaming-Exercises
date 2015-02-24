@@ -1,0 +1,171 @@
+{
+    "meta":{
+        "code":200
+    },
+    "notifications":[
+        {
+            "type":"notificationTray",
+            "item":{
+                "unreadCount":1
+            }
+        }
+    ],
+    "response":{
+        "suggestedFilters":{
+            "header":"Tap to show:",
+            "filters":[
+                {
+                    "name":"With specials",
+                    "key":"specials"
+                },
+                {
+                    "name":"Open now",
+                    "key":"openNow"
+                }
+            ]
+        },
+        "warning":{
+            "text":"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+        },
+        "suggestedRadius":922,
+        "headerLocation":"New York",
+        "headerFullLocation":"New York",
+        "headerLocationGranularity":"city",
+        "totalResults":248,
+        "suggestedBounds":{
+            "ne":{
+                "lat":40.70701030093768,
+                "lng":-74.00423851420616
+            },
+            "sw":{
+                "lat":40.70431064115223,
+                "lng":-74.0015140492704
+            }
+        },
+        "groups":[
+            {
+                "type":"Recommended Places",
+                "name":"recommended",
+                "items":[
+                    {
+                        "reasons":{
+                            "count":1,
+                            "items":[
+                                {
+                                    "summary":"People who like South Street Seaport Mall go here",
+                                    "type":"general",
+                                    "reasonName":"relatedPlacesReason",
+                                    "message":"People who go to South Street Seaport Mall tend to go here."
+                                }
+                            ]
+                        },
+                        "venue":{
+                            "id":"3fd66200f964a520daf11ee3",
+                            "name":"South Street Seaport",
+                            "contact":{
+                                "phone":"2127327678",
+                                "formattedPhone":"(212) 732-7678",
+                                "twitter":"theseaport"
+                            },
+                            "location":{
+                                "address":"South St",
+                                "crossStreet":"Pier 17",
+                                "lat":40.70566047104496,
+                                "lng":-74.00287628173828,
+                                "distance":675,
+                                "postalCode":"10038",
+                                "cc":"US",
+                                "city":"New York",
+                                "state":"NY",
+                                "country":"United States",
+                                "formattedAddress":[
+                                    "South St (Pier 17)",
+                                    "New York, NY 10038"
+                                ]
+                            },
+                            "categories":[
+                                {
+                                    "id":"4bf58dd8d48988d1e0941735",
+                                    "name":"Harbor \/ Marina",
+                                    "pluralName":"Harbors \/ Marinas",
+                                    "shortName":"Harbor \/ Marina",
+                                    "icon":{
+                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/harbor_",
+                                        "suffix":".png"
+                                    },
+                                    "primary":true
+                                }
+                            ],
+                            "verified":true,
+                            "stats":{
+                                "checkinsCount":45846,
+                                "usersCount":29751,
+                                "tipCount":179
+                            },
+                            "url":"http:\/\/www.southstreetseaport.com",
+                            "like":false,
+                            "rating":9.5,
+                            "ratingColor":"00B551",
+                            "ratingSignals":376,
+                            "specials":{
+                                "count":0,
+                                "items":[
+
+                                ]
+                            },
+                            "photos":{
+                                "count":2438,
+                                "groups":[
+
+                                ]
+                            },
+                            "hereNow":{
+                                "count":0,
+                                "summary":"Nobody here",
+                                "groups":[
+
+                                ]
+                            },
+                            "venuePage":{
+                                "id":"59071427"
+                            },
+                            "storeId":""
+                        },
+                        "tips":[
+                            {
+                                "id":"4be227e670c603bb64649ab4",
+                                "createdAt":1273112550,
+                                "text":"Catch N before he sails into the sunset on his boat, The Charlotte. Or go with him\u2014he\u2019s been known to take impromptu trips (and even more impromptu guests) around the island.",
+                                "type":"user",
+                                "url":"http:\/\/www.gossipgirl.net\/blog\/",
+                                "canonicalUrl":"https:\/\/foursquare.com\/item\/4be227e670c603bb64649ab4",
+                                "likes":{
+                                    "count":1679,
+                                    "groups":[
+
+                                    ],
+                                    "summary":"1679 likes"
+                                },
+                                "logView":true,
+                                "todo":{
+                                    "count":508
+                                },
+                                "user":{
+                                    "id":"749968",
+                                    "firstName":"Gossip Girl",
+                                    "gender":"none",
+                                    "photo":{
+                                        "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
+                                        "suffix":"\/TBW52TWGW0QQSHSB.jpg"
+                                    },
+                                    "type":"page"
+                                }
+                            }
+                        ],
+                        "referralId":"e-0-3fd66200f964a520daf11ee3-5"
+                    }
+                ]
+            }
+        ]
+    }
+}

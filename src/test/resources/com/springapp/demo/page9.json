@@ -1,0 +1,166 @@
+{"meta": {
+    "code": 200
+}, "notifications": [
+    {
+        "type": "notificationTray",
+        "item": {
+            "unreadCount": 1
+        }
+    }
+], "response": {
+    "suggestedFilters": {
+        "header": "Tap to show:",
+        "filters": [
+            {
+                "name": "Places friends go",
+                "key": "friendVisits"
+            },
+            {
+                "name": "$-$$$$",
+                "key": "price"
+            }
+        ]
+    },
+    "warning": {
+        "text": "There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+    },
+    "suggestedRadius": 922,
+    "headerLocation": "New York",
+    "headerFullLocation": "New York",
+    "headerLocationGranularity": "city",
+    "totalResults": 10,
+    "suggestedBounds": {
+        "ne": {
+            "lat": 40.69506185306003,
+            "lng": -73.9997162117304
+        },
+        "sw": {
+            "lat": 40.69236219327458,
+            "lng": -73.99698712155822
+        }
+    },
+    "groups": [
+        {
+            "type": "Recommended Places",
+            "name": "recommended",
+            "items": [
+                {
+                    "reasons": {
+                        "count": 0,
+                        "items": [
+                            {
+                                "summary": "This spot is popular",
+                                "type": "general",
+                                "reasonName": "globalInteractionReason"
+                            }
+                        ]
+                    },
+                    "venue": {
+                        "id": "4be30f9dd27a20a1cd1f915b",
+                        "name": "River Deli",
+                        "contact": {
+                            "phone": "7182549200",
+                            "formattedPhone": "(718) 254-9200"
+                        },
+                        "location": {
+                            "address": "32 Joralemon St",
+                            "crossStreet": "Columbia Pl",
+                            "lat": 40.69371202316731,
+                            "lng": -73.99835166664431,
+                            "distance": 713,
+                            "postalCode": "11201",
+                            "cc": "US",
+                            "city": "Brooklyn",
+                            "state": "NY",
+                            "country": "United States",
+                            "formattedAddress": ["32 Joralemon St (Columbia Pl)", "Brooklyn, NY 11201"]
+                        },
+                        "categories": [
+                            {
+                                "id": "4bf58dd8d48988d110941735",
+                                "name": "Italian Restaurant",
+                                "pluralName": "Italian Restaurants",
+                                "shortName": "Italian",
+                                "icon": {
+                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/italian_",
+                                    "suffix": ".png"
+                                },
+                                "primary": true
+                            }
+                        ],
+                        "verified": false,
+                        "stats": {
+                            "checkinsCount": 2364,
+                            "usersCount": 1290,
+                            "tipCount": 61
+                        },
+                        "price": {
+                            "tier": 2,
+                            "message": "Moderate",
+                            "currency": "$"
+                        },
+                        "hasMenu": true,
+                        "like": false,
+                        "rating": 9.3,
+                        "ratingColor": "00B551",
+                        "ratingSignals": 133,
+                        "menu": {
+                            "type": "Menu",
+                            "label": "Menu",
+                            "anchor": "View Menu",
+                            "url": "https:\/\/foursquare.com\/v\/river-deli\/4be30f9dd27a20a1cd1f915b\/menu",
+                            "mobileUrl": "https:\/\/foursquare.com\/v\/4be30f9dd27a20a1cd1f915b\/device_menu"
+                        },
+                        "hours": {
+                            "status": "Likely open",
+                            "isOpen": true
+                        },
+                        "specials": {
+                            "count": 0,
+                            "items": []
+                        },
+                        "photos": {
+                            "count": 87,
+                            "groups": []
+                        },
+                        "hereNow": {
+                            "count": 0,
+                            "summary": "Nobody here",
+                            "groups": []
+                        }
+                    },
+                    "tips": [
+                        {
+                            "id": "4e2d9cbd18a80bb0587069c1",
+                            "createdAt": 1311612093,
+                            "text": "The best Italian in Brooklyn Heights",
+                            "type": "user",
+                            "url": "http:\/\/www.goscoville.com",
+                            "canonicalUrl": "https:\/\/foursquare.com\/item\/4e2d9cbd18a80bb0587069c1",
+                            "likes": {
+                                "count": 5,
+                                "groups": [],
+                                "summary": "5 likes"
+                            },
+                            "logView": true,
+                            "todo": {
+                                "count": 1
+                            },
+                            "user": {
+                                "id": "1158548",
+                                "firstName": "Jon",
+                                "lastName": "Resnik",
+                                "gender": "male",
+                                "photo": {
+                                    "prefix": "https:\/\/irs3.4sqi.net\/img\/user\/",
+                                    "suffix": "\/KGVEOEEGENXY1IJC.jpg"
+                                }
+                            }
+                        }
+                    ],
+                    "referralId": "e-0-4be30f9dd27a20a1cd1f915b-9"
+                }
+            ]
+        }
+    ]
+}}

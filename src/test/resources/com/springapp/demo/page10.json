@@ -1,0 +1,172 @@
+{"meta": {
+    "code": 200
+}, "notifications": [
+    {
+        "type": "notificationTray",
+        "item": {
+            "unreadCount": 1
+        }
+    }
+], "response": {
+    "suggestedFilters": {
+        "header": "Tap to show:",
+        "filters": [
+            {
+                "name": "With specials",
+                "key": "specials"
+            },
+            {
+                "name": "I haven't been",
+                "key": "novelty"
+            }
+        ]
+    },
+    "warning": {
+        "text": "There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+    },
+    "suggestedRadius": 922,
+    "headerLocation": "New York",
+    "headerFullLocation": "New York",
+    "headerLocationGranularity": "city",
+    "totalResults": 10,
+    "suggestedBounds": {
+        "ne": {
+            "lat": 40.70398467892052,
+            "lng": -73.9943685515071
+        },
+        "sw": {
+            "lat": 40.70128501913507,
+            "lng": -73.99164295361986
+        }
+    },
+    "groups": [
+        {
+            "type": "Recommended Places",
+            "name": "recommended",
+            "items": [
+                {
+                    "reasons": {
+                        "count": 0,
+                        "items": [
+                            {
+                                "summary": "This spot is popular",
+                                "type": "general",
+                                "reasonName": "globalInteractionReason"
+                            }
+                        ]
+                    },
+                    "venue": {
+                        "id": "4f69f2b76d86f87117bb13ab",
+                        "name": "Gran Eléctrica",
+                        "contact": {
+                            "phone": "7188522700",
+                            "formattedPhone": "(718) 852-2700",
+                            "twitter": "granelectrica"
+                        },
+                        "location": {
+                            "address": "5 Front St",
+                            "crossStreet": "at Old Fulton St",
+                            "lat": 40.702634849027795,
+                            "lng": -73.99300575256348,
+                            "distance": 659,
+                            "postalCode": "11201",
+                            "cc": "US",
+                            "city": "Brooklyn",
+                            "state": "NY",
+                            "country": "United States",
+                            "formattedAddress": ["5 Front St (at Old Fulton St)", "Brooklyn, NY 11201"]
+                        },
+                        "categories": [
+                            {
+                                "id": "4bf58dd8d48988d1c1941735",
+                                "name": "Mexican Restaurant",
+                                "pluralName": "Mexican Restaurants",
+                                "shortName": "Mexican",
+                                "icon": {
+                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/mexican_",
+                                    "suffix": ".png"
+                                },
+                                "primary": true
+                            }
+                        ],
+                        "verified": true,
+                        "stats": {
+                            "checkinsCount": 6676,
+                            "usersCount": 4231,
+                            "tipCount": 119
+                        },
+                        "url": "http:\/\/www.granelectrica.com",
+                        "price": {
+                            "tier": 3,
+                            "message": "Expensive",
+                            "currency": "$"
+                        },
+                        "hasMenu": true,
+                        "like": false,
+                        "rating": 9.1,
+                        "ratingColor": "00B551",
+                        "ratingSignals": 293,
+                        "menu": {
+                            "type": "Menu",
+                            "label": "Menu",
+                            "anchor": "View Menu",
+                            "url": "https:\/\/foursquare.com\/v\/gran-el%C3%A9ctrica\/4f69f2b76d86f87117bb13ab\/menu",
+                            "mobileUrl": "https:\/\/foursquare.com\/v\/4f69f2b76d86f87117bb13ab\/device_menu"
+                        },
+                        "hours": {
+                            "status": "Open until 10:30 PM",
+                            "isOpen": true
+                        },
+                        "specials": {
+                            "count": 0,
+                            "items": []
+                        },
+                        "photos": {
+                            "count": 417,
+                            "groups": []
+                        },
+                        "hereNow": {
+                            "count": 0,
+                            "summary": "Nobody here",
+                            "groups": []
+                        },
+                        "venuePage": {
+                            "id": "83879813"
+                        },
+                        "storeId": ""
+                    },
+                    "tips": [
+                        {
+                            "id": "54c95972498e01d155e6139d",
+                            "createdAt": 1422481778,
+                            "text": "The margarita de toronja picante is the best margarita in NYC, making our list of \"The Tastes That Make the City: NYC Edition.\"",
+                            "type": "user",
+                            "url": "https:\/\/foursquare.com\/top-places\/new-york-city\/tastes-that-make-the-city",
+                            "canonicalUrl": "https:\/\/foursquare.com\/item\/54c95972498e01d155e6139d",
+                            "likes": {
+                                "count": 102,
+                                "groups": [],
+                                "summary": "102 likes"
+                            },
+                            "logView": true,
+                            "editedAt": 1424718286,
+                            "todo": {
+                                "count": 0
+                            },
+                            "user": {
+                                "id": "107525669",
+                                "firstName": "The Tastes that Make the City",
+                                "gender": "none",
+                                "photo": {
+                                    "prefix": "https:\/\/irs1.4sqi.net\/img\/user\/",
+                                    "suffix": "\/107525669-FY3QZSWU1VI2QFKE"
+                                }
+                            }
+                        }
+                    ],
+                    "referralId": "e-0-4f69f2b76d86f87117bb13ab-10"
+                }
+            ]
+        }
+    ]
+}}
