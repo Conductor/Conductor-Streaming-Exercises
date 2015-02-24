@@ -16,9 +16,9 @@ public class MainController {
 
     /**
      * Exercise 5: Below you'll find a simple query to the Foursquare API for cheap eats near Brooklyn.
-     * Modify this so that we query Foursquare for both Los Angeles and New York for only the highest price dining
-     * options.  This should be as real time as possible--don't buffer anything in memory, just print it out as soon
-     * Foursquare sends us more information.  You may want to use a combination operator to achieve this.
+     * Modify this so that we query Foursquare for both Los Angeles and New York for only the highest price and highested
+     * rates dining options.  This should be as real time as possible--don't buffer anything in memory, just print it
+     * out as soon Foursquare sends us more information.  You may want to use a combination operator to achieve this.
      */
     void home() {
         foursquareQueryer.getStream(
