@@ -1,5 +1,7 @@
 # streaming_samples
-Welcome to the streaming_samples project!
+Welcome to the streaming_samples project!  The purpose of this project is to help you understand basic concepts in
+reactive streaming.  To that end, code has been provided which queries the Foursquare API for recommended places--you'll
+stream this information to obtain insights.
 
 ## To build
 Simply run mvn install -DskipTests=true 
