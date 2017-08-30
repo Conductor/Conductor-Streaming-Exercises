@@ -1,187 +1,170 @@
-{
-    "meta":{
-        "code":200
-    },
-    "notifications":[
-        {
-            "type":"notificationTray",
-            "item":{
-                "unreadCount":1
-            }
+{"meta": {
+    "code": 200
+}, "notifications": [
+    {
+        "type": "notificationTray",
+        "item": {
+            "unreadCount": 1
         }
-    ],
-    "response":{
-        "suggestedFilters":{
-            "header":"Tap to show:",
-            "filters":[
-                {
-                    "name":"$-$$$$",
-                    "key":"price"
-                },
-                {
-                    "name":"Open now",
-                    "key":"openNow"
-                }
-            ]
-        },
-        "warning":{
-            "text":"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
-        },
-        "suggestedRadius":922,
-        "headerLocation":"New York",
-        "headerFullLocation":"New York",
-        "headerLocationGranularity":"city",
-        "totalResults":248,
-        "suggestedBounds":{
-            "ne":{
-                "lat":40.70398731356812,
-                "lng":-73.9949742511446
-            },
-            "sw":{
-                "lat":40.70128765378267,
-                "lng":-73.99224865425516
-            }
-        },
-        "groups":[
+    }
+], "response": {
+    "suggestedFilters": {
+        "header": "Tap to show:",
+        "filters": [
             {
-                "type":"Recommended Places",
-                "name":"recommended",
-                "items":[
-                    {
-                        "reasons":{
-                            "count":0,
-                            "items":[
-                                {
-                                    "summary":"This spot is popular",
-                                    "type":"general",
-                                    "reasonName":"globalInteractionReason"
-                                }
-                            ]
-                        },
-                        "venue":{
-                            "id":"50ca6337e4b04e1f3135689c",
-                            "name":"Juliana's Pizza",
-                            "contact":{
-                                "phone":"7185966700",
-                                "formattedPhone":"(718) 596-6700"
-                            },
-                            "location":{
-                                "address":"19 Old Fulton St",
-                                "lat":40.70263748367539,
-                                "lng":-73.99361145269988,
-                                "distance":613,
-                                "postalCode":"11201",
-                                "cc":"US",
-                                "city":"Brooklyn",
-                                "state":"NY",
-                                "country":"United States",
-                                "formattedAddress":[
-                                    "19 Old Fulton St",
-                                    "Brooklyn, NY 11201"
-                                ]
-                            },
-                            "categories":[
-                                {
-                                    "id":"4bf58dd8d48988d1ca941735",
-                                    "name":"Pizza Place",
-                                    "pluralName":"Pizza Places",
-                                    "shortName":"Pizza",
-                                    "icon":{
-                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_",
-                                        "suffix":".png"
-                                    },
-                                    "primary":true
-                                }
-                            ],
-                            "verified":false,
-                            "stats":{
-                                "checkinsCount":5252,
-                                "usersCount":4049,
-                                "tipCount":128
-                            },
-                            "url":"http:\/\/julianaspizza.com",
-                            "price":{
-                                "tier":2,
-                                "message":"Moderate",
-                                "currency":"$"
-                            },
-                            "like":false,
-                            "rating":9.2,
-                            "ratingColor":"00B551",
-                            "ratingSignals":362,
-                            "menu":{
-                                "type":"Menu",
-                                "label":"Menu",
-                                "anchor":"View Menu",
-                                "url":"http:\/\/julianaspizza.com\/menu\/",
-                                "mobileUrl":"http:\/\/julianaspizza.com\/menu\/",
-                                "externalUrl":"http:\/\/julianaspizza.com\/menu\/"
-                            },
-                            "hours":{
-                                "status":"Open until 10:00 PM",
-                                "isOpen":true
-                            },
-                            "specials":{
-                                "count":0,
-                                "items":[
-
-                                ]
-                            },
-                            "photos":{
-                                "count":363,
-                                "groups":[
-
-                                ]
-                            },
-                            "hereNow":{
-                                "count":1,
-                                "summary":"One person is checked in here",
-                                "groups":[
-                                    {
-                                        "type":"others",
-                                        "name":"Other people here",
-                                        "count":1,
-                                        "items":[
-
-                                        ]
-                                    }
-                                ]
-                            }
-                        },
-                        "tips":[
-                            {
-                                "id":"5115df2be4b059beb0b42125",
-                                "createdAt":1360387883,
-                                "text":"Outstanding. And the smalls are hardly small: 16 inches. (A large is 18\")",
-                                "type":"user",
-                                "canonicalUrl":"https:\/\/foursquare.com\/item\/5115df2be4b059beb0b42125",
-                                "likes":{
-                                    "count":8,
-                                    "groups":[
-
-                                    ],
-                                    "summary":"8 likes"
-                                },
-                                "logView":true,
-                                "todo":{
-                                    "count":0
-                                },
-                                "user":{
-                                    "id":"47819",
-                                    "firstName":"Whitney",
-                                    "lastName":"Snyder",
-                                    "gender":"male",
-                                    "photo":{
-                                        "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
-                                        "suffix":"\/WFEA5M2SH5VSEOGA.jpg"
-                                    }
-                                }
-                            }
-                        ],
-                        "referralId":"e-0-50ca6337e4b04e1f3135689c-6"
-                    }
-                ]
+                "name": "$-$$$$",
+                "key": "price"
+            },
+            {
+                "name": "I haven't been",
+                "key": "novelty"
             }
         ]
-    }
-}
+    },
+    "warning": {
+        "text": "There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+    },
+    "suggestedRadius": 922,
+    "headerLocation": "New York",
+    "headerFullLocation": "New York",
+    "headerLocationGranularity": "city",
+    "totalResults": 10,
+    "suggestedBounds": {
+        "ne": {
+            "lat": 40.69969981307108,
+            "lng": -73.99425772112157
+        },
+        "sw": {
+            "lat": 40.69700015328563,
+            "lng": -73.99153047440548
+        }
+    },
+    "groups": [
+        {
+            "type": "Recommended Places",
+            "name": "recommended",
+            "items": [
+                {
+                    "reasons": {
+                        "count": 0,
+                        "items": [
+                            {
+                                "summary": "This spot is popular",
+                                "type": "general",
+                                "reasonName": "globalInteractionReason"
+                            }
+                        ]
+                    },
+                    "venue": {
+                        "id": "4de26e06814df7ebdc14af8b",
+                        "name": "Vineapple Cafe",
+                        "contact": {
+                            "phone": "3477991701",
+                            "formattedPhone": "(347) 799-1701",
+                            "twitter": "vineapplecafe"
+                        },
+                        "location": {
+                            "address": "71 Pineapple St",
+                            "crossStreet": "btwn Henry & Hicks",
+                            "lat": 40.69834998317835,
+                            "lng": -73.99289409776352,
+                            "distance": 627,
+                            "postalCode": "11201",
+                            "cc": "US",
+                            "city": "Brooklyn",
+                            "state": "NY",
+                            "country": "United States",
+                            "formattedAddress": ["71 Pineapple St (btwn Henry & Hicks)", "Brooklyn, NY 11201"]
+                        },
+                        "categories": [
+                            {
+                                "id": "4bf58dd8d48988d16d941735",
+                                "name": "Café",
+                                "pluralName": "Cafés",
+                                "shortName": "Café",
+                                "icon": {
+                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                                    "suffix": ".png"
+                                },
+                                "primary": true
+                            }
+                        ],
+                        "verified": true,
+                        "stats": {
+                            "checkinsCount": 5160,
+                            "usersCount": 1706,
+                            "tipCount": 91
+                        },
+                        "url": "http:\/\/vineapple.com",
+                        "price": {
+                            "tier": 2,
+                            "message": "Moderate",
+                            "currency": "$"
+                        },
+                        "hasMenu": true,
+                        "like": false,
+                        "rating": 9.1,
+                        "ratingColor": "00B551",
+                        "ratingSignals": 267,
+                        "menu": {
+                            "type": "Menu",
+                            "label": "Menu",
+                            "anchor": "View Menu",
+                            "url": "https:\/\/foursquare.com\/v\/vineapple-cafe\/4de26e06814df7ebdc14af8b\/menu",
+                            "mobileUrl": "https:\/\/foursquare.com\/v\/4de26e06814df7ebdc14af8b\/device_menu"
+                        },
+                        "hours": {
+                            "status": "Open until 8:00 PM",
+                            "isOpen": true
+                        },
+                        "specials": {
+                            "count": 0,
+                            "items": []
+                        },
+                        "photos": {
+                            "count": 154,
+                            "groups": []
+                        },
+                        "hereNow": {
+                            "count": 0,
+                            "summary": "Nobody here",
+                            "groups": []
+                        },
+                        "venuePage": {
+                            "id": "94802691"
+                        }
+                    },
+                    "tips": [
+                        {
+                            "id": "5022a28ae4b007e779b1ba24",
+                            "createdAt": 1344447114,
+                            "text": "Favorite freelancer spot. Great coffee, good tunes, strong wifi, lovely staff. Stay all day! They serve beer & wine, too.",
+                            "type": "user",
+                            "canonicalUrl": "https:\/\/foursquare.com\/item\/5022a28ae4b007e779b1ba24",
+                            "likes": {
+                                "count": 12,
+                                "groups": [],
+                                "summary": "12 likes"
+                            },
+                            "logView": true,
+                            "todo": {
+                                "count": 0
+                            },
+                            "user": {
+                                "id": "1991265",
+                                "firstName": "Lauren",
+                                "lastName": "Farmer",
+                                "gender": "female",
+                                "photo": {
+                                    "prefix": "https:\/\/irs0.4sqi.net\/img\/user\/",
+                                    "suffix": "\/T5BLBJDTXAFWLAZI.jpg"
+                                }
+                            }
+                        }
+                    ],
+                    "referralId": "e-0-4de26e06814df7ebdc14af8b-7"
+                }
+            ]
+        }
+    ]
+}}

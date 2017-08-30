@@ -59,29 +59,24 @@
                             ]
                         },
                         "venue":{
-                            "id":"430d0a00f964a5203e271fe3",
-                            "name":"Brooklyn Bridge Park",
+                            "id":"4b81ea40f964a520e0c330e3",
+                            "name":"Brooklyn Bridge Park - Pier 1",
                             "contact":{
-                                "phone":"2128033822",
-                                "formattedPhone":"(212) 803-3822",
-                                "twitter":"nycparks",
-                                "facebook":"104475634308",
-                                "facebookUsername":"BartowPell",
-                                "facebookName":"Bartow-Pell Mansion Museum"
+                                "twitter":"bklynbrdgpark"
                             },
                             "location":{
-                                "address":"Main St.",
-                                "crossStreet":"Plymouth St.",
-                                "lat":40.701593743002,
-                                "lng":-73.99592399597168,
-                                "distance":387,
+                                "address":"334 Furman St",
+                                "crossStreet":"Cranberry",
+                                "lat":40.702634,
+                                "lng":-73.996119,
+                                "distance":439,
                                 "postalCode":"11201",
                                 "cc":"US",
                                 "city":"Brooklyn",
                                 "state":"NY",
                                 "country":"United States",
                                 "formattedAddress":[
-                                    "Main St. (Plymouth St.)",
+                                    "334 Furman St (Cranberry)",
                                     "Brooklyn, NY 11201"
                                 ]
                             },
@@ -100,15 +95,15 @@
                             ],
                             "verified":true,
                             "stats":{
-                                "checkinsCount":28106,
-                                "usersCount":17544,
-                                "tipCount":170
+                                "checkinsCount":14752,
+                                "usersCount":9615,
+                                "tipCount":62
                             },
-                            "url":"http:\/\/nyc.gov\/parks",
+                            "url":"http:\/\/www.brooklynbridgepark.org",
                             "like":false,
-                            "rating":9.7,
+                            "rating":9.5,
                             "ratingColor":"00B551",
-                            "ratingSignals":517,
+                            "ratingSignals":169,
                             "hours":{
                                 "status":"Likely open",
                                 "isOpen":true
@@ -120,7 +115,7 @@
                                 ]
                             },
                             "photos":{
-                                "count":3832,
+                                "count":1401,
                                 "groups":[
 
                                 ]
@@ -135,49 +130,48 @@
                         },
                         "tips":[
                             {
-                                "id":"4eaf024f9a521bacdb216401",
-                                "createdAt":1320092239,
-                                "text":"The best waterfront in NYC offers a unique view of the lower Manhattan skyline, aquatic features, such as a salt marsh filled with native cordgrass, and Jane\u2019s Carousel, a restored ride from 1922.",
+                                "id":"5162c51ee4b0946e1c63f2b5",
+                                "createdAt":1365427486,
+                                "text":"Many types of birds and crustaceans have made themselves at home in the salt marsh at Pier 1.  We can't blame them- the view is spectacular!",
                                 "type":"user",
-                                "url":"http:\/\/newyork.timeout.com\/things-to-do\/2157709\/the-best-of-nyc?page=0,4?cmpid=4sq",
-                                "canonicalUrl":"https:\/\/foursquare.com\/item\/4eaf024f9a521bacdb216401",
+                                "canonicalUrl":"https:\/\/foursquare.com\/item\/5162c51ee4b0946e1c63f2b5",
                                 "photo":{
-                                    "id":"4eb07b21754a93b634da178b",
-                                    "createdAt":1320188705,
+                                    "id":"5162c51f7ab49c026b2b15bc",
+                                    "createdAt":1365427487,
                                     "source":{
                                         "name":"Foursquare Web",
                                         "url":"https:\/\/foursquare.com"
                                     },
-                                    "prefix":"https:\/\/irs2.4sqi.net\/img\/general\/",
-                                    "suffix":"\/FVQLIPZXSEVCSCT3YU0SNMGDCADXBHRZYFSJUAGP5SXPCXPF.jpg",
-                                    "width":492,
-                                    "height":330
+                                    "prefix":"https:\/\/irs0.4sqi.net\/img\/general\/",
+                                    "suffix":"\/13764780__bnl3AdEOgNoLoIM5xGj95juKyPkO4huoIkI9IuzqqU.jpg",
+                                    "width":800,
+                                    "height":521
                                 },
-                                "photourl":"https:\/\/irs2.4sqi.net\/img\/general\/original\/FVQLIPZXSEVCSCT3YU0SNMGDCADXBHRZYFSJUAGP5SXPCXPF.jpg",
+                                "photourl":"https:\/\/irs0.4sqi.net\/img\/general\/original\/13764780__bnl3AdEOgNoLoIM5xGj95juKyPkO4huoIkI9IuzqqU.jpg",
                                 "likes":{
-                                    "count":613,
+                                    "count":117,
                                     "groups":[
 
                                     ],
-                                    "summary":"613 likes"
+                                    "summary":"117 likes"
                                 },
                                 "logView":true,
                                 "todo":{
-                                    "count":122
+                                    "count":17
                                 },
                                 "user":{
-                                    "id":"742542",
-                                    "firstName":"Time Out New York",
+                                    "id":"13764780",
+                                    "firstName":"City of New York",
                                     "gender":"none",
                                     "photo":{
                                         "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-                                        "suffix":"\/XXHKCBSQHBORZNSR.jpg"
+                                        "suffix":"\/2X1FKJPUY3DGRRK3.png"
                                     },
                                     "type":"page"
                                 }
                             }
                         ],
-                        "referralId":"e-0-430d0a00f964a5203e271fe3-1"
+                        "referralId":"e-0-4b81ea40f964a520e0c330e3-2"
                     }
                 ]
             }

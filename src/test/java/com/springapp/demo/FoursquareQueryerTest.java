@@ -1,29 +1,16 @@
 package com.springapp.demo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.Lists;
 import com.springapp.demo.model.FoursquarePathBuilder;
 import com.springapp.demo.model.generated.Explore;
-import io.netty.bootstrap.ServerBootstrap;
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.handler.logging.LogLevel;
-import io.reactivex.netty.RxNetty;
-import io.reactivex.netty.protocol.http.client.HttpClient;
-import io.reactivex.netty.protocol.http.server.HttpServer;
-import io.reactivex.netty.protocol.http.server.HttpServerBuilder;
-import io.reactivex.netty.protocol.http.server.HttpServerRequest;
-import io.reactivex.netty.protocol.http.server.HttpServerResponse;
-import io.reactivex.netty.protocol.http.server.RequestHandler;
-import io.reactivex.netty.server.RxServerThreadFactory;
 import org.apache.commons.io.IOUtils;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import rx.Observable;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -31,8 +18,6 @@ import static org.junit.Assert.assertTrue;
 public class FoursquareQueryerTest {
     private FoursquareQueryer queryer;
 
-    private static HttpServer<ByteBuf, ByteBuf> server;
-    private static int port;
     private static ObjectMapper objectMapper;
 
     @BeforeClass
@@ -42,27 +27,14 @@ public class FoursquareQueryerTest {
 
     @Before
     public void setUp() throws Exception {
-        // Create an in-memory RxNetty server
-        HttpServerBuilder<ByteBuf, ByteBuf> builder
-                = new HttpServerBuilder<ByteBuf, ByteBuf>(new ServerBootstrap().group(new NioEventLoopGroup(10, new RxServerThreadFactory())), port, new RequestHandler<ByteBuf, ByteBuf>() {
-            private int i = 0;
+        // Create a http requester that serves files
+        HTTPRequester requester = new HTTPRequester() {
             @Override
-            public Observable<Void> handle(HttpServerRequest<ByteBuf> request, HttpServerResponse<ByteBuf> response) {
-                i++;
-                return response.writeStringAndFlush(getJsonContents(String.format("page%d.json", i)));
+            public Stream<String> request(FoursquarePathBuilder builder, int page) throws Exception {
+                return Stream.of(getJsonContents(String.format("page%d.json", page)));
             }
-        });
-        server = builder.enableWireLogging(LogLevel.ERROR).build();
-        server.start(); // Start accepting connections
-        port = server.getServerPort(); // store the port for safekeeping, so we can use our client against it
-
-        HttpClient<ByteBuf, ByteBuf> client = RxNetty.createHttpClient("localhost", port);
-        queryer =  new FoursquareQueryer(client);
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        server.shutdown(); // Kill after each test
+        };
+        queryer =  new FoursquareQueryer(requester);
     }
 
     /********************************************************************************************************************
@@ -114,9 +86,9 @@ public class FoursquareQueryerTest {
 
     @Test
     public void testGetStream() throws Exception {
-        Observable<Explore> stream = queryer.getStream(FoursquarePathBuilder.fromExplorerEndpoint().setLatLon(1, 1));
+        Stream<Explore> stream = queryer.getStream(FoursquarePathBuilder.fromExplorerEndpoint().setLatLon(1, 1));
 
-        List<Explore> events = Lists.newArrayList(stream.toBlocking().toIterable());
+        List<Explore> events = stream.collect(Collectors.toList());
         assertEquals(10, events.size());
 
         Explore event1 = events.get(0);
@@ -136,7 +108,7 @@ public class FoursquareQueryerTest {
 
         // Assert the contents match and are in the correct order
         for (int i = 0; i < 10; i++) {
-            assertJsonContentsEqual(events.get(i), String.format("page%d.json", i+1));
+            assertJsonContentsEqual(events.get(i), String.format("page%d.json", i));
         }
     }
 
