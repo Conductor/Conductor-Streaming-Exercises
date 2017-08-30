@@ -12,12 +12,12 @@
         "header": "Tap to show:",
         "filters": [
             {
-                "name": "$-$$$$",
-                "key": "price"
+                "name": "Places friends go",
+                "key": "friendVisits"
             },
             {
-                "name": "With specials",
-                "key": "specials"
+                "name": "$-$$$$",
+                "key": "price"
             }
         ]
     },
@@ -31,12 +31,12 @@
     "totalResults": 10,
     "suggestedBounds": {
         "ne": {
-            "lat": 40.70508676952132,
-            "lng": -73.9961386016178
+            "lat": 40.69506185306003,
+            "lng": -73.9997162117304
         },
         "sw": {
-            "lat": 40.702387109735874,
-            "lng": -73.99341341940881
+            "lat": 40.69236219327458,
+            "lng": -73.99698712155822
         }
     },
     "groups": [
@@ -56,68 +56,63 @@
                         ]
                     },
                     "venue": {
-                        "id": "3fd66200f964a520efe81ee3",
-                        "name": "The River Café",
+                        "id": "4be30f9dd27a20a1cd1f915b",
+                        "name": "River Deli",
                         "contact": {
-                            "phone": "7185225200",
-                            "formattedPhone": "(718) 522-5200",
-                            "twitter": "therivercafe"
+                            "phone": "7182549200",
+                            "formattedPhone": "(718) 254-9200"
                         },
                         "location": {
-                            "address": "1 Water St",
-                            "crossStreet": "at Brooklyn Bridge",
-                            "lat": 40.7037369396286,
-                            "lng": -73.9947760105133,
-                            "distance": 606,
+                            "address": "32 Joralemon St",
+                            "crossStreet": "Columbia Pl",
+                            "lat": 40.69371202316731,
+                            "lng": -73.99835166664431,
+                            "distance": 713,
                             "postalCode": "11201",
                             "cc": "US",
                             "city": "Brooklyn",
                             "state": "NY",
                             "country": "United States",
-                            "formattedAddress": ["1 Water St (at Brooklyn Bridge)", "Brooklyn, NY 11201"]
+                            "formattedAddress": ["32 Joralemon St (Columbia Pl)", "Brooklyn, NY 11201"]
                         },
                         "categories": [
                             {
-                                "id": "4bf58dd8d48988d14e941735",
-                                "name": "American Restaurant",
-                                "pluralName": "American Restaurants",
-                                "shortName": "American",
+                                "id": "4bf58dd8d48988d110941735",
+                                "name": "Italian Restaurant",
+                                "pluralName": "Italian Restaurants",
+                                "shortName": "Italian",
                                 "icon": {
-                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                                    "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/italian_",
                                     "suffix": ".png"
                                 },
                                 "primary": true
                             }
                         ],
-                        "verified": true,
+                        "verified": false,
                         "stats": {
-                            "checkinsCount": 3752,
-                            "usersCount": 3203,
-                            "tipCount": 87
+                            "checkinsCount": 2364,
+                            "usersCount": 1290,
+                            "tipCount": 61
                         },
-                        "url": "http:\/\/www.rivercafe.com",
                         "price": {
-                            "tier": 4,
-                            "message": "Very Expensive",
+                            "tier": 2,
+                            "message": "Moderate",
                             "currency": "$"
                         },
                         "hasMenu": true,
                         "like": false,
-                        "rating": 9.0,
+                        "rating": 9.3,
                         "ratingColor": "00B551",
-                        "ratingSignals": 176,
-                        "reservations": {
-                            "url": "http:\/\/www.opentable.com\/single.aspx?rid=820&ref=9601"
-                        },
+                        "ratingSignals": 133,
                         "menu": {
                             "type": "Menu",
                             "label": "Menu",
                             "anchor": "View Menu",
-                            "url": "https:\/\/foursquare.com\/v\/the-river-caf%C3%A9\/3fd66200f964a520efe81ee3\/menu",
-                            "mobileUrl": "https:\/\/foursquare.com\/v\/3fd66200f964a520efe81ee3\/device_menu"
+                            "url": "https:\/\/foursquare.com\/v\/river-deli\/4be30f9dd27a20a1cd1f915b\/menu",
+                            "mobileUrl": "https:\/\/foursquare.com\/v\/4be30f9dd27a20a1cd1f915b\/device_menu"
                         },
                         "hours": {
-                            "status": "Open until 11:00 PM",
+                            "status": "Likely open",
                             "isOpen": true
                         },
                         "specials": {
@@ -125,48 +120,45 @@
                             "items": []
                         },
                         "photos": {
-                            "count": 430,
+                            "count": 87,
                             "groups": []
                         },
                         "hereNow": {
                             "count": 0,
                             "summary": "Nobody here",
                             "groups": []
-                        },
-                        "venuePage": {
-                            "id": "35406086"
-                        },
-                        "storeId": ""
+                        }
                     },
                     "tips": [
                         {
-                            "id": "4c77dd6aa3a29c74ddba5ecd",
-                            "createdAt": 1282923882,
-                            "text": "One of the city\u2019s best views, and excellent food still, after all these years. A sunset reservation\u2019s best, with rabbit and dumplings.",
+                            "id": "4e2d9cbd18a80bb0587069c1",
+                            "createdAt": 1311612093,
+                            "text": "The best Italian in Brooklyn Heights",
                             "type": "user",
-                            "canonicalUrl": "https:\/\/foursquare.com\/item\/4c77dd6aa3a29c74ddba5ecd",
+                            "url": "http:\/\/www.goscoville.com",
+                            "canonicalUrl": "https:\/\/foursquare.com\/item\/4e2d9cbd18a80bb0587069c1",
                             "likes": {
-                                "count": 138,
+                                "count": 5,
                                 "groups": [],
-                                "summary": "138 likes"
+                                "summary": "5 likes"
                             },
                             "logView": true,
                             "todo": {
-                                "count": 107
+                                "count": 1
                             },
                             "user": {
-                                "id": "360215",
-                                "firstName": "The New York Times",
-                                "gender": "none",
+                                "id": "1158548",
+                                "firstName": "Jon",
+                                "lastName": "Resnik",
+                                "gender": "male",
                                 "photo": {
-                                    "prefix": "https:\/\/irs1.4sqi.net\/img\/user\/",
-                                    "suffix": "\/PYLLJKRD2U343VPG.png"
-                                },
-                                "type": "page"
+                                    "prefix": "https:\/\/irs3.4sqi.net\/img\/user\/",
+                                    "suffix": "\/KGVEOEEGENXY1IJC.jpg"
+                                }
                             }
                         }
                     ],
-                    "referralId": "e-0-3fd66200f964a520efe81ee3-8"
+                    "referralId": "e-0-4be30f9dd27a20a1cd1f915b-9"
                 }
             ]
         }

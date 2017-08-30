@@ -12,6 +12,10 @@ import java.util.TreeMap;
  * Created by tmeehan on 2/18/15.
  */
 public class FoursquarePathBuilder {
+
+    public static final String FOURSQUARE_HOST = "api.foursquare.com";
+    public static final int FOURSQUARE_PORT = 443;
+
     private String baseUrl;
 
     private TreeMap<String, NameValuePair> urlParameters;
@@ -175,7 +179,11 @@ public class FoursquarePathBuilder {
     }
 
     public String build() {
-        StringBuilder builder = new StringBuilder(baseUrl);
+        StringBuilder builder = new StringBuilder("https://")
+                .append(FOURSQUARE_HOST)
+                .append(":")
+                .append(FOURSQUARE_PORT)
+                .append(baseUrl);
         Validate.isTrue(
                 (!urlParameters.containsKey("near") && urlParameters.containsKey("ll"))
                         || (urlParameters.containsKey("near") && !urlParameters.containsKey("ll")),

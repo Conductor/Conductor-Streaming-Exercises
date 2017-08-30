@@ -3,19 +3,12 @@ package com.springapp.demo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springapp.demo.model.FoursquarePathBuilder;
 import com.springapp.demo.model.generated.Explore;
-import io.netty.buffer.ByteBuf;
-import io.netty.handler.logging.LogLevel;
-import io.reactivex.netty.RxNetty;
-import io.reactivex.netty.pipeline.ssl.DefaultFactories;
-import io.reactivex.netty.protocol.http.client.HttpClient;
-import io.reactivex.netty.protocol.http.client.HttpClientRequest;
-import io.reactivex.netty.protocol.http.client.HttpClientResponse;
-import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Func1;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
+import java.util.Spliterators;
+import java.util.Iterator;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 /**
  * Utility class to query Foursquare endpoints, specifically the explore endpoint.
@@ -24,30 +17,27 @@ import java.nio.charset.Charset;
  * Created by tmeehan on 2/19/15.
  */
 public class FoursquareQueryer {
-    public static final String FOURSQUARE_HOST = "api.foursquare.com";
-    public static final int FOURSQUARE_PORT = 443;
 
     private final ObjectMapper mapper;
-    private final HttpClient<ByteBuf, ByteBuf> rxClient;
+    private final HTTPRequester requester;
 
     /**
      * Constructs a FoursquareQueryer with a default http client, which should fulfil non-testing
      * use cases
      */
     public FoursquareQueryer() {
-        this(RxNetty.<ByteBuf, ByteBuf>newHttpClientBuilder(FOURSQUARE_HOST, FOURSQUARE_PORT)
-                .withSslEngineFactory(DefaultFactories.trustAll())
-                .enableWireLogging(LogLevel.DEBUG)
-                .build());
+        this(HTTPRequester.fromAjaxCall());
     }
 
     /**
-     * Constructs a FoursquareQueryer with an injected rxClient, useful for unit testing
-     * @param rxClient
+     * Constructs a FoursquareQueryer with the provided http client, which should fulfil test
+     * use cases.
+     *
+     * @param requester
      */
-    protected FoursquareQueryer(HttpClient<ByteBuf, ByteBuf> rxClient) {
-        this.rxClient = rxClient;
+    protected FoursquareQueryer(HTTPRequester requester) {
         mapper = new ObjectMapper();
+        this.requester = requester;
     }
 
     /**
@@ -56,22 +46,26 @@ public class FoursquareQueryer {
      * @param builder the query to construct
      * @return an observable sequence of Explore objects
      */
-    public Observable<Explore> getStream(final FoursquarePathBuilder builder) {
-        return Observable.create(new Observable.OnSubscribe<Explore>() {
+    public Stream<Explore> getStream(final FoursquarePathBuilder builder) {
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(new Iterator<Explore>() {
+
+            private int currentItem = 0;
+            private int totalResults = 0;
+
             @Override
-            public void call(final Subscriber<? super Explore> subscriber) {
-                subscriber.onStart();
-
-                Explore firstResult = getPaginatedExploreObject(builder, 0);
-                subscriber.onNext(firstResult);
-
-                for (int i = 1; i < firstResult.getResponse().getTotalResults(); i++) {
-                    subscriber.onNext(getPaginatedExploreObject(builder, i));
+            public boolean hasNext() {
+                if (totalResults == 0) {
+                    Explore firstResult = getPaginatedExploreObject(builder, 0);
+                    totalResults = firstResult.getResponse().getTotalResults().intValue();
                 }
-
-                subscriber.onCompleted();
+                return currentItem < totalResults;
             }
-        });
+
+            @Override
+            public Explore next() {
+                return getPaginatedExploreObject(builder, currentItem++);
+            }
+        }, 0), false);
     }
 
     /**
@@ -83,24 +77,19 @@ public class FoursquareQueryer {
      * @return the Explore object representing the ith page
      */
     protected Explore getPaginatedExploreObject(final FoursquarePathBuilder builder, final int i) {
-        return rxClient.submit(HttpClientRequest.createGet(builder.setOffset(i).setLimit(1).build()))
-                .flatMap(new Func1<HttpClientResponse<ByteBuf>, Observable<ByteBuf>>() {
-                    @Override
-                    public Observable<ByteBuf> call(HttpClientResponse<ByteBuf> response) {
-                        return response.getContent();
-                    }
-                })
-                .map(new Func1<ByteBuf, Explore>() {
-                    @Override
-                    public Explore call(ByteBuf data) {
+        try {
+            return requester.request(builder, i)
+                    .map((data) -> {
                         try {
-                            return mapper.readValue(data.toString(Charset.forName("UTF8")), Explore.class);
+                            return mapper.readValue(data, Explore.class);
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
-                    }
-                })
-                .toBlocking()
-                .first();
+                    })
+                    .findFirst()
+                    .get();
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

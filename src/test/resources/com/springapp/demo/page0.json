@@ -15,12 +15,12 @@
             "header":"Tap to show:",
             "filters":[
                 {
-                    "name":"$-$$$$",
-                    "key":"price"
-                },
-                {
                     "name":"Open now",
                     "key":"openNow"
+                },
+                {
+                    "name":"Places friends go",
+                    "key":"friendVisits"
                 }
             ]
         },
@@ -31,15 +31,15 @@
         "headerLocation":"New York",
         "headerFullLocation":"New York",
         "headerLocationGranularity":"city",
-        "totalResults":248,
+        "totalResults":10,
         "suggestedBounds":{
             "ne":{
-                "lat":40.70398731356812,
-                "lng":-73.9949742511446
+                "lat":40.70285113114201,
+                "lng":-73.99764126117948
             },
             "sw":{
-                "lat":40.70128765378267,
-                "lng":-73.99224865425516
+                "lat":40.69807424601781,
+                "lng":-73.99491483394381
             }
         },
         "groups":[
@@ -59,35 +59,35 @@
                             ]
                         },
                         "venue":{
-                            "id":"50ca6337e4b04e1f3135689c",
-                            "name":"Juliana's Pizza",
+                            "id":"42377700f964a52024201fe3",
+                            "name":"Brooklyn Heights Promenade",
                             "contact":{
-                                "phone":"7185966700",
-                                "formattedPhone":"(718) 596-6700"
+
                             },
                             "location":{
-                                "address":"19 Old Fulton St",
-                                "lat":40.70263748367539,
-                                "lng":-73.99361145269988,
-                                "distance":613,
+                                "address":"Columbia Heights",
+                                "crossStreet":"btwn Remsen & Orange",
+                                "lat":40.69829137715981,
+                                "lng":-73.99663209915161,
+                                "distance":342,
                                 "postalCode":"11201",
                                 "cc":"US",
                                 "city":"Brooklyn",
                                 "state":"NY",
                                 "country":"United States",
                                 "formattedAddress":[
-                                    "19 Old Fulton St",
+                                    "Columbia Heights (btwn Remsen & Orange)",
                                     "Brooklyn, NY 11201"
                                 ]
                             },
                             "categories":[
                                 {
-                                    "id":"4bf58dd8d48988d1ca941735",
-                                    "name":"Pizza Place",
-                                    "pluralName":"Pizza Places",
-                                    "shortName":"Pizza",
+                                    "id":"4bf58dd8d48988d163941735",
+                                    "name":"Park",
+                                    "pluralName":"Parks",
+                                    "shortName":"Park",
                                     "icon":{
-                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_",
+                                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/park_",
                                         "suffix":".png"
                                     },
                                     "primary":true
@@ -95,30 +95,17 @@
                             ],
                             "verified":false,
                             "stats":{
-                                "checkinsCount":5252,
-                                "usersCount":4049,
-                                "tipCount":128
+                                "checkinsCount":18077,
+                                "usersCount":8754,
+                                "tipCount":135
                             },
-                            "url":"http:\/\/julianaspizza.com",
-                            "price":{
-                                "tier":2,
-                                "message":"Moderate",
-                                "currency":"$"
-                            },
+                            "url":"http:\/\/nyharborparks.org\/visit\/brhe.html",
                             "like":false,
-                            "rating":9.2,
+                            "rating":9.7,
                             "ratingColor":"00B551",
-                            "ratingSignals":362,
-                            "menu":{
-                                "type":"Menu",
-                                "label":"Menu",
-                                "anchor":"View Menu",
-                                "url":"http:\/\/julianaspizza.com\/menu\/",
-                                "mobileUrl":"http:\/\/julianaspizza.com\/menu\/",
-                                "externalUrl":"http:\/\/julianaspizza.com\/menu\/"
-                            },
+                            "ratingSignals":286,
                             "hours":{
-                                "status":"Open until 10:00 PM",
+                                "status":"Likely open",
                                 "isOpen":true
                             },
                             "specials":{
@@ -128,7 +115,7 @@
                                 ]
                             },
                             "photos":{
-                                "count":363,
+                                "count":2037,
                                 "groups":[
 
                                 ]
@@ -150,35 +137,35 @@
                         },
                         "tips":[
                             {
-                                "id":"5115df2be4b059beb0b42125",
-                                "createdAt":1360387883,
-                                "text":"Outstanding. And the smalls are hardly small: 16 inches. (A large is 18\")",
+                                "id":"49bd0c7470c603bb74118eb4",
+                                "createdAt":1237126260,
+                                "text":"Walking along the Brooklyn Heights Promenade at sunset on a warm day.",
                                 "type":"user",
-                                "canonicalUrl":"https:\/\/foursquare.com\/item\/5115df2be4b059beb0b42125",
+                                "canonicalUrl":"https:\/\/foursquare.com\/item\/49bd0c7470c603bb74118eb4",
                                 "likes":{
-                                    "count":8,
+                                    "count":68,
                                     "groups":[
 
                                     ],
-                                    "summary":"8 likes"
+                                    "summary":"68 likes"
                                 },
                                 "logView":true,
                                 "todo":{
-                                    "count":0
+                                    "count":17
                                 },
                                 "user":{
-                                    "id":"47819",
-                                    "firstName":"Whitney",
-                                    "lastName":"Snyder",
-                                    "gender":"male",
+                                    "id":"40",
+                                    "firstName":"Alicia",
+                                    "lastName":"Kachmar",
+                                    "gender":"female",
                                     "photo":{
-                                        "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
-                                        "suffix":"\/WFEA5M2SH5VSEOGA.jpg"
+                                        "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                                        "suffix":"\/40_1236625293.jpg"
                                     }
                                 }
                             }
                         ],
-                        "referralId":"e-0-50ca6337e4b04e1f3135689c-6"
+                        "referralId":"e-0-42377700f964a52024201fe3-0"
                     }
                 ]
             }
