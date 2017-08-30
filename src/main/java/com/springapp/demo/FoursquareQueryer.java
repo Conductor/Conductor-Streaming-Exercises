@@ -22,7 +22,7 @@ public class FoursquareQueryer {
     private final HTTPRequester requester;
 
     /**
-     * Constructs a FoursquareQueryer with a default http client, which should fulfil non-testing
+     * Constructs a FoursquareQueryer with a default http client, which should fulfill non-testing
      * use cases
      */
     public FoursquareQueryer() {
@@ -30,7 +30,7 @@ public class FoursquareQueryer {
     }
 
     /**
-     * Constructs a FoursquareQueryer with the provided http client, which should fulfil test
+     * Constructs a FoursquareQueryer with the provided http client, which should fulfill test
      * use cases.
      *
      * @param requester
